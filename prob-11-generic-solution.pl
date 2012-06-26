@@ -31,6 +31,7 @@ foreach $i (split("\n",$input)){
     my @line = split(/\s+/,$i);
     push(@data,\@line);
 }
+# length of smaller grids 
 my $length = 4 ;
 foreach $i (0 .. (scalar(@data)-1)) {
     foreach $j (0 .. (scalar(@{$data[$i]}))) {
