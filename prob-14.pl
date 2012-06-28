@@ -27,5 +27,14 @@ foreach my $num ( 1 .. 999999 ){
     chain($num) if (! exists $map{$num} );
 }
 
-my @sorted = sort { $map{$b} <=> $map{$a} } keys %map;
-print $sorted[0],":",$map{$sorted[0]};
+my $max_l=0;
+my $max_num;
+foreach my $num (keys %map){
+    
+    if ( $map{$num} > $max_l ){
+        $max_l = $map{$num};
+        $max_num = $num;
+    }
+}
+
+print "$max_num \n";
