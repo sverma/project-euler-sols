@@ -1,4 +1,4 @@
-$maxNum = shift(@ARGV) || 10;
+$maxNum = shift(@ARGV) || 20;
 ($primes,$nonprimes,$startnum,$endnum) = findAllPrime($maxNum) ;
 
 sub findAllPrime{

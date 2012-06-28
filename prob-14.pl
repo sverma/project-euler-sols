@@ -3,8 +3,13 @@ my $i;
 my %map;
 sub chain {
     my $num = shift ;
+    if (exists $map{$num}){
+        $i = $map{$num};
+        return;
+    }
     if($num == 1){
         $i =1;
+        $map{$i}=1;
         return;
     }
     if ($num % 2 == 0 ){
